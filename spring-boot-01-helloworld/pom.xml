@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.atguigu</groupId><!--GroupID是项目组织唯一的标识符，实际对应JAVA的包的结构，是main目录里java的目录结构。-->
+    <artifactId>spring-boot-01-helloworld</artifactId><!--ArtifactID就是项目的唯一的标识符，实际对应项目的名称，就是项目根目录的名称。-->
+    <version>1.0-SNAPSHOT</version>
+
+    <!--Sprigboot仲裁中心，以后我们导入依赖不需要写版本，没有在dependencies里面的需要写-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
+    </parent>
+
+    <!--spring-boot-starter：Springboot场景启动器，帮助我们导入正常运行所依赖的组件-->
+    <!-- Boot将所有的功能场景都抽取出来，做成一个个的starters（启动器），
+    只需要在项目里面引入这些starter相关场景的所有依赖都会导入进来。要用什么功能就导入什么场景的启动器 -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- 这个插件，可以将应用打包成一个可执行的jar包；-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
